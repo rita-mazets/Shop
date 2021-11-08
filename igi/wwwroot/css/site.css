@@ -1,0 +1,21 @@
+﻿header {
+    background-color: #343a40;
+}
+
+footer {
+    background-color: #343a40;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.nav-color {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.nav-margin {
+    margin-left: 35%;
+}
+
+.nav-check {
+}
