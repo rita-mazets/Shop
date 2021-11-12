@@ -1,0 +1,38 @@
+﻿using igi.Entities;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace igi.Controllers
+{
+    public class ImageController : Controller
+    {
+        UserManager<ApplicationUser> _userManager;
+        IWebHostEnvironment _env;
+
+        public ImageController(UserManager<ApplicationUser> userManager, IWebHostEnvironment env)
+        {
+            this._env = env;
+            this._userManager = userManager;
+        }
+
+        public async Task<FileResult> GetAvatar()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user.AvaterImage != null)
+            {
+                return File(user.AvaterImage, "image/...");
+            }
+            else 
+            {
+                var avatarPath = "/Images/anonymous.png";
+
+                return File(_env.WebRootFileProvider.GetFileInfo(avatarPath).CreateReadStream(), "image/...");
+            }
+        }
+    }
+}
