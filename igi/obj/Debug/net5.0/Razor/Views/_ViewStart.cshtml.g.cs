@@ -21,13 +21,20 @@ using igi;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\mita_razets\source\repos\igi\igi\Views\_ViewImports.cshtml"
+using igi.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\mita_razets\source\repos\igi\igi\Views\_ViewImports.cshtml"
 using igi.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a4bc9cb4a1d11f0c28a746ed054b4cb82c25e233", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c9354d875d9a623bbc0c8127230657a011377e4f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b4b6f0cbe9be959f1e7860bc52f3d5a5ae3fbf75", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

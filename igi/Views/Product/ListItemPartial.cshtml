@@ -1,0 +1,17 @@
+﻿@model Product
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.Image" alt="@Model.Name" />
+    <h3>Model:@Model.Name</h3>
+    <h5>Price: @Model.Price.ToString("c")</h5>
+    @{
+        var request = ViewContext.HttpContext.Request;
+        var returnUrl = request.Path + request.QueryString.ToUriComponent();
+    }
+    <p>
+        <a class="btn btn-warning"
+           asp-action="Add"
+           asp-controller="Cart"
+           asp-route-id="@Model.Id"
+           asp-route-returnUrl="@returnUrl">В корзину</a>
+    </p>
+</div>

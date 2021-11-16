@@ -1,0 +1,5 @@
+﻿@model ListViewModel<Product>
+@foreach (var product in Model)
+{ 
+    <partial name="ListItemPartial" model="@product"/>
+}

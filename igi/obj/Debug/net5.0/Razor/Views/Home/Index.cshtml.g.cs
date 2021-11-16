@@ -21,13 +21,20 @@ using igi;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\mita_razets\source\repos\igi\igi\Views\_ViewImports.cshtml"
+using igi.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\mita_razets\source\repos\igi\igi\Views\_ViewImports.cshtml"
 using igi.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3146a9ad80d5e96a7a3408d3fdc2cfe77fcc3ba9", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c9354d875d9a623bbc0c8127230657a011377e4f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b4b6f0cbe9be959f1e7860bc52f3d5a5ae3fbf75", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -91,9 +98,9 @@ using igi.Models;
 #line hidden
 #nullable disable
             WriteLiteral("    </ol>\r\n    <hr>\r\n    <h3>Форма</h3>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3146a9ad80d5e96a7a3408d3fdc2cfe77fcc3ba94595", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3146a9ad80d5e96a7a3408d3fdc2cfe77fcc3ba94764", async() => {
                 WriteLiteral("\r\n        <div class=\"nav-check\" style=\"width:50%;\">\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3146a9ad80d5e96a7a3408d3fdc2cfe77fcc3ba94923", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3146a9ad80d5e96a7a3408d3fdc2cfe77fcc3ba95092", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
