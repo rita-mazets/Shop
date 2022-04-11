@@ -13,25 +13,23 @@ namespace igi.Controllers
     {
         UserManager<ApplicationUser> _userManager;
         IWebHostEnvironment _env;
-
-        public ImageController(UserManager<ApplicationUser> userManager, IWebHostEnvironment env)
+        public ImageController(UserManager<ApplicationUser>
+                userManager, IWebHostEnvironment env)
         {
-            this._env = env;
-            this._userManager = userManager;
+            _userManager = userManager;
+            _env = env;
         }
 
         public async Task<FileResult> GetAvatar()
         {
             var user = await _userManager.GetUserAsync(User);
             if (user.AvaterImage != null)
-            {
                 return File(user.AvaterImage, "image/...");
-            }
-            else 
+            else
             {
-                var avatarPath = "/Images/anonymous.png";
-
+                var avatarPath = "/Images/avatar.png";
                 return File(_env.WebRootFileProvider.GetFileInfo(avatarPath).CreateReadStream(), "image/...");
+
             }
         }
     }

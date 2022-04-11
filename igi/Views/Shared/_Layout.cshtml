@@ -3,32 +3,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - web_953503_mazets</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
 </head>
 <body>
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <a class="navbar-brand" asp-action="Index" asp-
-                   controller="Home">WebLabs95350096</a>
-
-                <div class="navbar-nav">
-                    @await Component.InvokeAsync("Menu")
-                </div>
+            <nav class="navbar navbar-dark navbar-expand-md">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+                    WebLabsV06
+                </a>
+                @await Component.InvokeAsync("Menu")
                 <partial name="_UserPartial" />
-                <!-- Информация пользователя - конец -->
-            </nav> <!-- Панель навигации - конец -->
-        </div><!-- container - конец -->
-    </header><!-- header - конец -->
+            </nav>
+        </div>
+    </header>
     <main class="container">
         @RenderBody()
     </main>
-    <footer>
-        <div class="container">
-            <div class="navbar navbar-dark navbar-expand-md bg-dark">
+    <footer class="fixed-bottom">
+        <div class="navbar navbar-dark  navbar-expand-md">
+            <div class="container">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" href="http://www.facebook.com">
                         <i class="fab fa-facebook-f fa-2x"></i>
@@ -43,13 +39,9 @@
             </div>
         </div>
     </footer>
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

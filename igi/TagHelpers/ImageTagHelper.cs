@@ -8,19 +8,22 @@ using System.Threading.Tasks;
 namespace igi.TagHelpers
 {
     [HtmlTargetElement(tag: "img", Attributes = "img-action, img-controller")]
-    public class ImageTagHelper : TagHelper
+
+public class ImageTagHelper : TagHelper
     {
-        public string ImageAction { get; set; }
-        public string ImageController { get; set; }
+        public string ImgAction { get; set; }
+        public string ImgController { get; set; }
         LinkGenerator _linkGenerator;
 
-        public ImageTagHelper(LinkGenerator link)
+        public ImageTagHelper(LinkGenerator linkGenerator)
         {
-            _linkGenerator = link;
+            _linkGenerator = linkGenerator;
         }
-        public override void Process(TagHelperContext context, TagHelperOutput output)
+        public override void Process(TagHelperContext context,
+        TagHelperOutput output)
         {
-            var uri = _linkGenerator.GetPathByAction(ImageAction, ImageController);
+            var uri = _linkGenerator.GetPathByAction(ImgAction,
+            ImgController);
             output.Attributes.Add("src", uri);
         }
     }

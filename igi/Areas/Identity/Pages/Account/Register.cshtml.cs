@@ -78,15 +78,11 @@ namespace igi.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
-                if (Input.Avatar != null) //для сохранения в бд картинок
+                if (Input.Avatar != null)
                 {
                     user.AvaterImage = new byte[(int)Input.Avatar.Length];
-                    await Input.Avatar
-                               .OpenReadStream()
-                               .ReadAsync(
-                                    user.AvaterImage,
-                                    0,
-                                    (int)Input.Avatar.Length);
+                    await Input.Avatar.OpenReadStream().ReadAsync(user.AvaterImage, 0, (int)Input.Avatar.Length);
+
                 }
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)

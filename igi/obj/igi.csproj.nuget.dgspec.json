@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mita_razets\\source\\repos\\igi\\igi\\igi.csproj": {}
+    "D:\\Margo\\учеба\\5 семестр\\иги\\7\\igi\\igi\\igi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mita_razets\\source\\repos\\igi\\igi\\igi.csproj": {
+    "D:\\Margo\\учеба\\5 семестр\\иги\\7\\igi\\igi\\igi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mita_razets\\source\\repos\\igi\\igi\\igi.csproj",
+        "projectUniqueName": "D:\\Margo\\учеба\\5 семестр\\иги\\7\\igi\\igi\\igi.csproj",
         "projectName": "igi",
-        "projectPath": "C:\\Users\\mita_razets\\source\\repos\\igi\\igi\\igi.csproj",
-        "packagesPath": "C:\\Users\\mita_razets\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mita_razets\\source\\repos\\igi\\igi\\obj\\",
+        "projectPath": "D:\\Margo\\учеба\\5 семестр\\иги\\7\\igi\\igi\\igi.csproj",
+        "packagesPath": "C:\\Users\\mmmaz\\.nuget\\packages\\",
+        "outputPath": "D:\\Margo\\учеба\\5 семестр\\иги\\7\\igi\\igi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mita_razets\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mmmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,6 +69,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
@@ -77,6 +85,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
