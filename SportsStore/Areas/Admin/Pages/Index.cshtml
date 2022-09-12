@@ -1,0 +1,59 @@
+﻿@page
+@model SportsStore.Areas.Admin.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-outline-info">
+    <span class="fa fa-plus-circle"> Добавить</span></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Product)
+        {
+                    <tr>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.ProductID"
+                                class="btn btn-outline-info">
+                                    <span class="fas fa-edit"></span></a>
+                            <a asp-page="./Delete" asp-route-id="@item.ProductID"
+                                class="btn btn-outline-danger">
+                                    <span class="fas fa-trash-alt"></span></a>
+                        </td>
+                    </tr>
+        }
+    </tbody>
+</table>
